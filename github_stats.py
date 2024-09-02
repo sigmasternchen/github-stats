@@ -490,7 +490,7 @@ Languages:
                 ):
                     continue
                 author = author_obj.get("author", {}).get("login", "")
-                if author != self.username:
+                if author not in [ self.username, os.environ.get("ALT_USERNAME", "") ]:
                     continue
 
                 for week in author_obj.get("weeks", []):
