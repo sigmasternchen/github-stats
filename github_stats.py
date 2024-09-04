@@ -490,6 +490,7 @@ Languages:
                 ):
                     continue
                 author = author_obj.get("author", {}).get("login", "")
+                print(author)
                 if author not in [ self.username, os.environ.get("ALT_USERNAME", "") ]:
                     continue
 
